@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduControl - Registro Académico</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <header class="encabezado">
+
+            <div class="logo">E</div>
+
+            <div class="titulo-logo">
+                <h2>EDUCONTROL</h2>
+                <p>SISTEMA DE REGISTRO ACADÉMICO</p>
+            </div>
+
+            <div class="estado">
+                ● Sistema activo
+            </div>
+
+        </header>
+
+        <main>
+
+            <section class="bienvenida">
+                <span class="etiqueta">GESTIÓN ESTUDIANTIL</span>
+
+                <h1>Registro de notas</h1>
+
+                <p>Ingrese la información del estudiante y sus calificaciones para consultar su rendimiento académico.</p>
+            </section>
+
+            <section class="tarjeta">
+
+                <div class="titulo-seccion">
+                    <span class="numero">01</span>
+
+                    <div>
+                        <h3>Información del estudiante</h3>
+                        <p>Datos personales y académicos</p>
+                    </div>
+                </div>
+
+                <div class="campos">
+
+                    <div class="campo completo">
+                        <label>Nombre completo</label>
+                        <input type="text" id="nombre"
+                        placeholder="Ingrese el nombre del estudiante">
+                    </div>
+
+                    <div class="campo">
+                        <label>Semestre académico</label>
+                        <input type="text" id="curso"
+                        placeholder="Ej. Quinto semestre">
+                    </div>
+
+                    <div class="campo">
+                        <label>Programa académico</label>
+                        <input type="text" id="programa"
+                        placeholder="Ej. Ingeniería de Sistemas">
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="tarjeta">
+
+                <div class="titulo-seccion">
+                    <span class="numero">02</span>
+
+                    <div>
+                        <h3>Calificaciones</h3>
+                        <p>Ingrese las cinco notas del estudiante</p>
+                    </div>
+                </div>
+
+                <div class="notas-grid">
+
+                    <div class="campo">
+                        <label>Nota 01</label>
+                        <input type="number" id="nota1" placeholder="0.0" min="0" max="5" step="0.1">
+                    </div>
+
+                    <div class="campo">
+                        <label>Nota 02</label>
+                        <input type="number" id="nota2" placeholder="0.0" min="0" max="5" step="0.1">
+                    </div>
+
+                    <div class="campo">
+                        <label>Nota 03</label>
+                        <input type="number" id="nota3" placeholder="0.0" min="0" max="5" step="0.1">
+                    </div>
+
+                    <div class="campo">
+                        <label>Nota 04</label>
+                        <input type="number" id="nota4" placeholder="0.0" min="0" max="5" step="0.1">
+                    </div>
+
+                    <div class="campo">
+                        <label>Nota 05</label>
+                        <input type="number" id="nota5" placeholder="0.0" min="0" max="5" step="0.1">
+                    </div>
+
+                </div>
+
+                <div class="informacion">
+                    <span>Escala de calificación: 0.0 - 5.0</span>
+                    <span>Nota mínima aprobatoria: 3.0</span>
+                </div>
+
+                <button onclick="calcular()">
+                    Calcular promedio
+                    <span>→</span>
+                </button>
+
+            </section>
+
+            <section id="resultado" class="resultado oculto"></section>
+
+        </main>
+
+        <footer>
+            EDUCONTROL © 2026 · Todos los derechos reservados
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
